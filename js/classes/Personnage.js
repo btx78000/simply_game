@@ -113,12 +113,9 @@ Personnage.prototype.deplacer = function(direction, map) {
 	// On commence l'animation
 	this.etatAnimation = 1;
 		
-
-
 	// On effectue le déplacement
 	this.x = prochaineCase.x;
 	this.y = prochaineCase.y;
-	
 		
 	return true;
 }

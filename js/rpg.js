@@ -1,6 +1,6 @@
 var map = new Map("premiere");
 
-var joueur = new Personnage("exemple.png", 7, 7, DIRECTION.BAS);
+var joueur = new Personnage("exemple.png", 7, 14, DIRECTION.BAS);
 map.addPersonnage(joueur);
 
 window.onload = function() {
@@ -11,7 +11,7 @@ window.onload = function() {
 	canvas.height = map.getHauteur() * 32;
 	
 	setInterval(function() {
-		map.dessinerMap(ctx, joueur);
+		map.dessinerMap(ctx);
 	}, 40);
 	
 	// Gestion du clavier

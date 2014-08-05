@@ -31,15 +31,14 @@ Map.prototype.addPersonnage = function(perso) {
 	this.personnages.push(perso);
 }
 
-Map.prototype.dessinerMap = function(context, player) {
-
-		var ligne = this.terrain;
-		this.tileset.dessinerTile(ligne[player.x], context, 0, 0);
-		for (var i = 0; i <= ligne.length; i++) {
-			this.tileset.dessinerTile(ligne[player.y], context, i * 32, i * 32);
+Map.prototype.dessinerMap = function(context) {
+	for(var i = 0, l = this.terrain.length ; i < l ; i++) {
+		var ligne = this.terrain[i];
+		var y = i * 32;
+		for(var j = 0, k = ligne.length ; j < k ; j++) {
+			this.tileset.dessinerTile(ligne[j], context, j * 32, y);
 		}
-			
-	
+	}
 	
 	// Dessin des personnages
 	for(var i = 0, l = this.personnages.length ; i < l ; i++) {
