@@ -44,9 +44,12 @@ odo.images([
 	{label:'arbre',data:'images/arbre64.png',bind:2,collides:true,height:1,offset:{x:10,y:-52}},
 ]);
 
-odo.addActiveElt(6,18,'MaxguN','images/pavedroit64.png',{x:20,y:-29});
-odo.addActiveElt(7,7,'Kaltorac','images/pavedroit64.png',{x:20,y:-29});
-odo.addActiveElt(20,6,'DarkKevin','images/pavedroit64.png',{x:20,y:-29});
+odo.addActiveElt(6,17,'MaxguN','images/ennemy.gif',{x:20,y:-29});
+odo.addActiveElt(8,14,'MaxguN','images/ennemy2.gif',{x:20,y:-29});
+odo.addActiveElt(8,15,'MaxguN','images/ennemy2.gif',{x:20,y:-29});
+odo.addActiveElt(6,18,'MaxguN','images/ennemy.gif',{x:20,y:-29});
+odo.addActiveElt(7,7,'Kaltorac','images/player1.gif',{x:20,y:-29});
+odo.addActiveElt(20,6,'DarkKevin','images/player1.gif',{x:20,y:-29});
 
 odo.interface.addElement('dk', {x:100,y:150,bg:'images/fond.png',taggable:true});
 
@@ -58,8 +61,9 @@ odo.interface.elements.dk.addText('20  ',110,180);
 odo.interface.elements.dk.addText('10  ',110,210);
 odo.interface.elements.dk.addText('150 ',110,240);
 odo.interface.elements.dk.addText('5   ',110,270);
+odo.interface.elements.dk.addText('Btx',180,30);
 odo.interface.elements.dk.addImage('images/btn_deplacer.png',185,220,'deplacer');
-odo.interface.elements.dk.addImage('images/pavedroit64.png',150,20);
+odo.interface.elements.dk.addImage('images/player1.gif',175,45);
 odo.interface.elements.dk.addImage('images/fermer.png',353,-10,'fermer');
 
 odo.interface.elements.dk.addEventListener('click', 'fermer',  function(){odo.interface.elements.dk.close();})
@@ -76,7 +80,7 @@ odo.interface.elements.mainMenu.open();
 /* On fait le menu de gauche */
 odo.interface.addElement('FrontMenu', {x:0,y:0,bg:'images/fond_icon.jpg',taggable:true});
 odo.interface.elements.FrontMenu.addText('C\'EST MAINTENANT AU TOUR DE << Btx >> DE JOUER ! ',110,100);
-odo.interface.elements.FrontMenu.addImage('images/pavedroit128.png',200,140,'close');
+odo.interface.elements.FrontMenu.addImage('images/ennemy.gif',200,140,'close');
 odo.interface.elements.FrontMenu.addEventListener('click', 'close',  function(){odo.interface.elements.FrontMenu.close();})
 odo.interface.elements.FrontMenu.open();
 
