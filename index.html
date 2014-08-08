@@ -1,25 +1,38 @@
-<!DOCTYPE html> 
-<html lang="fr"> 
-	<head> 
-		<meta charset=utf-8 /> 
-		<title>ODGE</title>
-		<script src="odge.js"></script>
-		<script src="demo64.js"></script>
-		<link rel="stylesheet" href="demo128.css">
+<!DOCTYPE html>
+<html>
+<!--
+	Tutoriel sur les jeux à base de tuiles
+	Page Index
+	Par Nicolas Gauville
+ -->
+	<head>
+		<meta charset="utf-8" />
+ 
+		<!--[if lt IE 9]><script src="assets/excanvas.js"></script><![endif]-->
+ 		<script src="assets/easel.js"></script>
+		<script src="assets/preload.js"></script>
+		<script src="assets/tween.js"></script>
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" media="screen" href="assets/skin.css" />
+		<title>Mon super jeu</title>
 	</head>
-	
-	<body oncontextmenu="return false">
-		<canvas width="0" height="0" style="position:fixed;z-index:-1;">
-			<p>Votre navigateur n'est pas compatible avec ODGE.</p>
-			<p>Les navigateur dont la compatibilité a été vérifiée sont:</p>
-				<ul>
-					<li><a href="http://www.google.fr/chrome">Chrome 5.0+</a></li>
-					<li><a href="http://www.mozilla-europe.org/firefox/">Firefox 3.6+</a></li>
-					<li><a href="http://www.opera.com/">Opera 10.5+</a></li>
-					<li><a href="http://www.apple.com/safari/">Safari 5.0+</a></li>
-				</ul>
-			<p>Des versions plus anciennes peuvent éventuellement être compatibles. Pensez tout de même à mettre à jour votre navigateur.</p>
-			<p>La meilleur expérience de jeu est obtenue avec <a href="http://www.google.fr/chrome">Chrome</a> ou <a href="http://www.opera.com/">Opera</a>.</p>
+	<body>
+		<!-- BODY -->
+		<canvas id="gameview" width="1290" height="800">
+  			Désolé, votre navigateur ne supporte pas la technologie Canvas, veillez utiliser un navigateur plus ressent.
 		</canvas>
+ 
+		<!--[if lt IE 9]><script>
+		G_vmlCanvasManager.initElement( document.getElementById('gameview') );
+		</script><![endif]-->
+ 
+		<!-- JS -->
+		<!-- JS -->
+		<script type="text/javascript" src="src/tiletype.js"></script>
+        <script type="text/javascript" src="src/tile.js"></script>
+        <script type="text/javascript" src="src/map.js"></script>
+        <script type="text/javascript" src="src/player.js"></script>
+        <script type="text/javascript" src="assets/gfx.js"></script>
+		<script type="text/javascript" src="assets/core.js"></script>
 	</body>
 </html>
