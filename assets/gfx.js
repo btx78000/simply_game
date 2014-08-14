@@ -7,27 +7,31 @@ var gfx = {};
  * Function exemple
  * @purpose : Génère un sol.
  */
-gfx.sol = function ()
+gfx.sol = function ($x, $y, $decalage, $decalage2, line_decal)
 {
         //On crée une nouvelle instance de la classe Shape
 
         this.gfx = new Shape();
  
         //On accéde a la propriété grapgics
-        this.gfx.graphics
-                //On initie un nouveau tracé (ici, gris)
-                .beginFill("#CCCCCC")
-                //On applique les actions vues dans le schémà
-                .moveTo(32,0)
-                .lineTo(0,-16)
-                .lineTo(-32,0)
-                .lineTo(0,16)
-                .lineTo(32,0)
-                //On termine le tracé.
-                .closePath();
+         //On accéde a la propriété grapgics
+        var doge = new Image();
+        doge.src = "images/herbe64.png";
+        var bitmap = new Bitmap(doge);
+        bitmap.x = 600 + ($x * 64) + decalage2;
+        bitmap.y = 200 + ($y * 32) - decalage;
+        bitmap.y = bitmap.y + line_decal * 16;
+        bitmap.x = bitmap.x - line_decal * 32;
+        bitmap.onClick = handleClick;
+       // bitmap.y =  + line_decal;
+        stage.addChild(bitmap);
+        stage.update();
         return this.gfx;
 };
-
+function handleClick(event)
+{
+        alert(event);
+}
 
 gfx.solTAlea = function ( $r, $g, $b )
 {
