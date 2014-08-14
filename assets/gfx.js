@@ -16,7 +16,7 @@ gfx.sol = function ($x, $y, $decalage, $decalage2, line_decal)
         //On accéde a la propriété grapgics
          //On accéde a la propriété grapgics
         var doge = new Image();
-        doge.src = "images/herbe64.png";
+        doge.src = "images/50652 (2).png";
         var bitmap = new Bitmap(doge);
         bitmap.x = 600 + ($x * 64) + decalage2;
         bitmap.y = 200 + ($y * 32) - decalage;
